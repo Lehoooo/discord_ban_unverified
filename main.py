@@ -14,7 +14,7 @@ async def on_ready():
     print("Ready")
 
 @bot.command()
-async def id(ctx):
+async def ban_unverified(ctx):
     for member in ctx.guild.members:
         for role in member.roles:
             if role.name != "Verified":
