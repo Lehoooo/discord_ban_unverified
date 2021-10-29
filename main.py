@@ -1,6 +1,7 @@
 import discord
 from discord import member
 from discord.ext import commands
+import time
 
 TOKEN = "PUT YOUR TOKEN HERE"
 
@@ -21,7 +22,9 @@ async def ban_unverified(ctx):
                 print(f"Banning {str(member.id) + str(member)}")
                 try:
                     await member.ban()
+                    time.sleep(2)
                 except Exception as e:
                     print("Error Banning")
+                    time.sleep(2)
 
 bot.run(str(TOKEN))
